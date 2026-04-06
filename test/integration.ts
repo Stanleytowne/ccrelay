@@ -80,7 +80,7 @@ async function main(): Promise<void> {
 
   const relay = spawn('node', ['packages/relay-server/dist/index.js'], {
     env: { ...process.env, PORT: String(PORT), RELAY_SECRET: SECRET },
-    cwd: '/Users/stanleytang/Documents/coding/ccrelay',
+    cwd: process.cwd(),
     stdio: ['pipe', 'pipe', 'pipe'],
   });
 
